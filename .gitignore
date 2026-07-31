@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Large archives and binaries
+*.zip
+*.exe
+*.tar.gz
+odoo-19.0.post20260506/
+bin/
+oca_web/
+node_modules/
+
+# Logs & Temp
+*.log
+*.tmp

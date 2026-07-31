@@ -1,0 +1,88 @@
+/* UMI Enterprise Home Dashboard SCSS */
+
+.o_enterprise_dashboard_container {
+    background: radial-gradient(circle at 50% 30%, #1c1d2e 0%, #0c0d15 100%) !important;
+    z-index: 10 !important;
+}
+
+.max-w-500 {
+    max-width: 500px !important;
+}
+
+.max-w-1000 {
+    max-width: 1000px !important;
+}
+
+.o_home_apps_grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
+    gap: 2.25rem 1.75rem !important;
+    justify-items: center !important;
+}
+
+.o_home_app_card {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    width: 120px !important;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.08) !important;
+        transform: translateY(-8px) scale(1.06) !important;
+
+        .o_home_app_icon_wrapper {
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5) !important;
+            background: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        .o_home_app_name {
+            color: #ffffff !important;
+        }
+    }
+}
+
+.o_home_app_icon_wrapper {
+    width: 72px !important;
+    height: 72px !important;
+    min-width: 72px !important;
+    min-height: 72px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+
+    .o_home_app_icon_img {
+        width: 56px !important;
+        height: 56px !important;
+        object-fit: contain !important;
+    }
+
+    .o_home_app_icon_fallback {
+        width: 100% !important;
+        height: 100% !important;
+        background: linear-gradient(135deg, #714B67 0%, #5B3852 100%) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .o_home_apps_grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.5rem 1rem !important;
+    }
+
+    .o_home_app_card {
+        width: 100% !important;
+
+        .o_home_app_icon_wrapper {
+            width: 60px !important;
+            height: 60px !important;
+            min-width: 60px !important;
+            min-height: 60px !important;
+
+            .o_home_app_icon_img {
+                width: 46px !important;
+                height: 46px !important;
+            }
+        }
+    }
+}
